@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
+RSpec.describe SessionsController, type: :controller do
   describe 'GET #new' do
     it 'returns http success' do
       get :new
@@ -12,18 +12,14 @@ RSpec.describe UsersController, type: :controller do
 
   describe 'GET #create' do
     it 'returns http success' do
-      get :create, params: { user: { name: 'Johan Tinjaca', email: 'user@invalid' } }
+      get :create
       expect(response).to have_http_status(:success)
-      expect(flash.empty?).to eq(false)
-      # expect(logged_in?).to eq(true)
     end
   end
 
-  describe 'GET #show' do
+  describe 'GET #destroy' do
     it 'returns http success' do
-      user = User.new(name: 'carlos', email: 'carlos@example.com')
-      user.save
-      get :show, params: { id: user.id }
+      get :destroy
       expect(response).to have_http_status(:success)
     end
   end
