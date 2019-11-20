@@ -15,6 +15,7 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -42,6 +43,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner'
+  gem 'rails-controller-testing', '~> 1.0.2'
   gem 'rspec-rails'
 end
 
@@ -56,8 +58,12 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'chromedriver-helper'
   gem 'selenium-webdriver'
 end
+
+# Simplecov
+gem 'simplecov', require: false, group: :test
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
