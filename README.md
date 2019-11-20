@@ -1,24 +1,34 @@
-# README
+# Project 2: Private Events
+This project is about building a site which allows users to create events and then manage user signups. You can check the complete description [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations#project-2-private-events)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built With:
+ruby 2.6.3, rails 5.2.3
 
-Things you may want to cover:
+## Author
+Johan Tinjaca https://github.com/jstiven01
 
-* Ruby version
+## Getting started
 
-* System dependencies
+To get started with the app, clone the repo and then install the needed gems:
 
-* Configuration
+```
+$ bundle install --without production
+```
 
-* Database creation
+Next, migrate the database:
 
-* Database initialization
+```
+$ rails db:migrate
+```
 
-* How to run the test suite
+Finally, run the test suite to verify that everything is working correctly:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ rails test
+```
 
-* Deployment instructions
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* ...
+```
+$ rails server
+```
