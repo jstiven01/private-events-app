@@ -2,3 +2,13 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <p><%= @user.name %></p>
 <p><%= @user.email %></p>
+<% unless @user.created_events.empty? %>
+<ul>
+    <% @user.created_events.each do |event| %>
+    <li><%= event.name %></li>
+    <li><%= event.location %></li>
+    <li><%= event.date_event %></li>
+    <% end %>
+</ul>
+<% end %>
+
