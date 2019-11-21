@@ -1,0 +1,19 @@
+<section class="all-events"> 
+    <h1>ALL EVENTS</h1>
+    <% if logged_in? %>
+        <p>User name: <%= current_user.name %></p>
+    <% end %>
+    <%= will_paginate %>
+    <% @events.each do |event| %>
+    <div>
+        <p><%= event.name %></p>
+        <p><%= event.location %></p>
+        <p><%= event.date_event %></p>
+        <p><%= event.description %></p>
+    </div>
+    <% end %>
+    <%= will_paginate %>
+    <div id='create-event'>
+        <%= link_to "Create event", new_event_path %>
+    </div>
+</section> 
