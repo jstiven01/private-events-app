@@ -47,4 +47,15 @@ RSpec.describe 'Show events related to user', type: :feature do
     expect(page).to have_content(event2.name)
     expect(page).to have_content(event3.name)
   end
+
+  scenario 'User’s Show page display without events' do
+    attendee.save
+    visit login_path
+    expect(page).to have_content('SIGN IN')
+    fill_in 'Email', with: attendee.email
+    click_button 'Sign in'
+    expect(current_path).to eql("/users/#{attendee.id}")
+    expect(page).to have_content(attendee.name)
+    expect(page).to have_content(attendee.email)
+  end
 end

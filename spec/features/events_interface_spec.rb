@@ -52,4 +52,24 @@ RSpec.describe 'Events interface', type: :feature do
     expect(page).to have_content('user2')
     expect(page).to have_content('user3')
   end
+
+  scenario 'Index with all events' do
+    Event.create(name: 'event1', location: 'somewhere',
+                 date_event: '2015/1/9-18:10', creator: user_creator)
+    Event.create(name: 'event2', location: 'somewhere',
+                 date_event: '2015/1/9-18:10', creator: user_creator)
+    Event.create(name: 'event3', location: 'somewhere',
+                 date_event: '2021/1/9-18:10', creator: user_creator)
+    Event.create(name: 'event4', location: 'somewhere',
+                 date_event: '2021/1/9-18:10', creator: user_creator)
+    Event.create(name: 'event5', location: 'somewhere',
+                 date_event: '2022/1/9-18:10', creator: user_creator)
+
+    visit events_path
+    expect(page).to have_content('event1')
+    expect(page).to have_content('event2')
+    expect(page).to have_content('event3')
+    expect(page).to have_content('event4')
+    expect(page).to have_content('event5')
+  end
 end

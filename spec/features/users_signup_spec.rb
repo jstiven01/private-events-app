@@ -11,8 +11,8 @@ RSpec.describe 'User sign up', type: :feature do
       fill_in 'Name', with: 'Johan Tinjaca'
       fill_in 'Email', with: 'user@example.com'
       click_button 'Create my account'
-    end.to change { User.count }.from(0).to(1)
-    expect(current_path).to eql('/users')
+    end.to change(User, :count).by(1)
+    expect(current_path).to eql("/users/#{User.last.id}")
     expect(page).to have_content('Johan Tinjaca')
     expect(page).to have_content('user@example.com')
   end

@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in(@user)
       flash[:success] = 'Welcome to the Private Events!!'
-      render 'show'
+      redirect_to user_path(@user)
     else
       render 'new'
     end
@@ -18,6 +18,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @upcoming_events = @user.upcoming_events
+    @prev_events = @user.previous_events
   end
 
   private
