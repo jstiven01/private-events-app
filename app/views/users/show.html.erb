@@ -12,3 +12,13 @@
 </ul>
 <% end %>
 
+<% unless @user.attended_events.empty? %>
+<ul>
+    <% @user.attended_events.each do |event| %>
+    <li><%= event.name %></li>
+    <li><%= event.location %></li>
+    <li><%= event.date_event %></li>
+    <% end %>
+</ul>
+<% end %>
+
