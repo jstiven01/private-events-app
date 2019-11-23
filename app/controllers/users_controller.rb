@@ -12,6 +12,7 @@ class UsersController < ApplicationController
       flash[:success] = 'Welcome to the Private Events!!'
       redirect_to user_path(@user)
     else
+      flash.now[:danger] = 'Email already registered'
       render 'new'
     end
   end
