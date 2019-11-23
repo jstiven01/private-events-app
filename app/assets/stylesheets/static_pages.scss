@@ -1,3 +1,103 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    margin: 0;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //background-image: url(https://cdn.evbstatic.com/s3-build/perm_001/d0969f/django/images/homefeed/music-campaing-6-2600-large.jpg) ;
+    margin: 0 auto;
+    padding: 0;
+    width: 980px;
+    height: 80px;
+    font-size: 15px;
+    font-weight: bold;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        li {
+            padding-right: 10px;
+            color: black;
+            font-weight: bold;;            
+        }
+    }
+    #logo {
+        font-family: 'Indie Flower', cursive;
+        font-size: 28px;
+        color: orangered;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.main-image {
+    width:  980px;
+    height: 480px;
+    margin: 0 auto;
+    background-image: url(https://cdn.evbstatic.com/s3-build/perm_001/d0969f/django/images/homefeed/music-campaing-6-2600-large.jpg);
+    background-size: 980px 600px;
+    background-repeat: no-repeat;
+}
+
+.static-page-title {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: 100%;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 44px;
+    padding: 0 5px;
+    >:last-child {
+        align-self: flex-end;
+        color: red;
+    }
+}
+
+.all-events {
+    margin: 0 auto;
+    padding: 0;
+    width: 980px;
+    font-weight: bold;
+    h1 {
+        margin: 10px 0;
+    }
+    .title-events{
+        color: red;
+        font-size: 20px;
+    }
+    .item-events > * {
+        padding: 0 10px;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    time {
+        font-size: 12px;
+        color: gray;
+            
+    }
+}

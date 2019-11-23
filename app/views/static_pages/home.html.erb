@@ -1,2 +1,35 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="main-image">
+<div class="static-page-title">
+    <div>Made for</div>
+    <div>those who do</div>
+</div>
+</div>
+<section class="all-events"> 
+    <h1>ALL EVENTS</h1>
+    <% if logged_in? %>
+        <p>User name: <%= current_user.name %></p>
+
+        <div id='create-event'>
+            <%= link_to "Create event", new_event_path %>
+        </div>
+    <% end %>
+    <p class="title-events">Upcoming Events</p>
+    <% @events_upcoming.each do |event| %>
+    <div class="item-events">
+        <%= link_to event.name, event_path(event) %>
+        <p><%= event.location %></p>
+        <p><%= time_tag event.date_event %></p>
+        <p><%= event.description %></p>
+    </div>
+    <% end %>
+    <p class="title-events">Past Events</p>
+    <% @events_past.each do |event| %>
+    <div class="item-events">
+        <%= link_to event.name, event_path(event) %>
+        <p><%= event.location %></p>
+        <p><%= time_tag event.date_event %></p>
+        <p><%= event.description %></p>
+    </div>
+    <% end %>
+
+</section> 

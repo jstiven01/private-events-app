@@ -1,11 +1,11 @@
 <header>
   <div>
-    <%= link_to "Private Events", '#', id: "logo" %>
+    <%= link_to "Private Events", root_path , id: "logo" %>
   </div>
   <nav>
     <ul>
-      <li><%= link_to "All Posts", '#' %></li>
-      <li><%= link_to "Create Post", '#' %></li>
+      <li><%= link_to "Help", '#' %></li>
+      <li><%= link_to "About", '#' %></li>
         <% if logged_in? %>
           <ul>
             <li>
@@ -13,6 +13,7 @@
             </li>
           </ul>
       <% else %>
+        <li><%= link_to "Sign up", new_user_path %></li>
         <li><%= link_to "Sign in", login_path %></li>
       <% end %>
     </ul>
