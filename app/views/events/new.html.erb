@@ -1,6 +1,5 @@
 <section class="create-event">
 <h1>Create an event</h1>
-<%#= render 'shared/error_messages' %>
 <%= form_for(@event, url: events_path) do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -12,7 +11,7 @@
       <%= f.date_field :date_event %>
 
       <%= f.label :description %>
-      <%= f.text_area :description, cols: 20, rows: 40 %>
+      <%= f.text_area :description, cols: 20, rows: 20 %>
 
       <%= f.submit 'Create Event' %>
 <% end %>

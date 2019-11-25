@@ -11,7 +11,6 @@ class User < ApplicationRecord
 
   def upcoming_events
     upc_events = []
-
     attended_events.each do |event|
       upc_events.push(event) if event.date_event >= Time.zone.now
     end

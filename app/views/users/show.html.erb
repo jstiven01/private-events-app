@@ -1,17 +1,14 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<p><%= @user.name %></p>
-<p><%= @user.email %></p>
-
 <section class="all-events"> 
     <% if logged_in? %>
-        <p>User name: <%= current_user.name %></p>
+        <p>Hey!! <%= current_user.name %></p>
 
-        <div id='create-event'>
-            <%= link_to "Create event", new_event_path %>
-            <%= link_to "Check all the events in Private-Events", root_path %>
+        <div id='links-event'>
+            <button type="button"><%= link_to "Create event", new_event_path %></button>
+            <button type="button"><%= link_to "Check all the events in Private-Events", root_path %></button>
         </div>
     <% end %>
+    <p class="title-events">Your Created Events</p>
+    <%= render partial:'shared/event', locals: { events: current_user.created_events } %>
     <p class="title-events">Your Upcoming Events</p>
     <%= render partial:'shared/event', locals: { events: @upcoming_events } %>
     <p class="title-events">Your Past Events</p>

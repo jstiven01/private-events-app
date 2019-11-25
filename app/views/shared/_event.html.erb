@@ -1,9 +1,8 @@
 <% events.each do |event| %>
-<div class="item-events">
-    <%= link_to event.name, event_path(event) %>
-    <p><%= event.location %></p>
-    <p><%= time_tag event.date_event %></p>
-    <p><%= event.description %></p>
-</div>
+<ul class="item-events">
+    <li>Event Name: <%= link_to event.name, event_path(event) %></li>
+    <li>Location: <%= event.location %></li>
+    <li><%= time_tag event.date_event %></li>
+</ul>
 <% end %>
 

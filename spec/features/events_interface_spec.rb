@@ -43,6 +43,12 @@ RSpec.describe 'Events interface', type: :feature do
   end
 
   scenario 'Event’s Show page display a list of attendees' do
+    user = User.new(name: 'User Example', email: 'user@example.com')
+    user.save
+    visit login_path
+    fill_in 'Email', with: 'user@example.com'
+    click_button 'Sign in'
+
     user1.user_events.create!(attended_event: event)
     user2.user_events.create!(attended_event: event)
     user3.user_events.create!(attended_event: event)

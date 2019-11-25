@@ -1,24 +1,21 @@
-example_id                                                | status  | run_time        |
---------------------------------------------------------- | ------- | --------------- |
-./spec/controllers/events_controller_spec.rb[1:1:1]       | failed  | 0.00442 seconds |
-./spec/controllers/events_controller_spec.rb[1:2:1]       | passed  | 0.00861 seconds |
-./spec/controllers/events_controller_spec.rb[1:3:1]       | passed  | 0.00384 seconds |
-./spec/controllers/sessions_controller_spec.rb[1:1:1]     | passed  | 0.00305 seconds |
-./spec/controllers/static_pages_controller_spec.rb[1:1:1] | passed  | 0.00665 seconds |
-./spec/controllers/users_controller_spec.rb[1:1:1]        | passed  | 0.00427 seconds |
-./spec/controllers/users_controller_spec.rb[1:2:1]        | passed  | 0.00576 seconds |
-./spec/features/events_interface_spec.rb[1:1]             | passed  | 0.06082 seconds |
-./spec/features/events_interface_spec.rb[1:2]             | passed  | 0.01311 seconds |
-./spec/features/events_interface_spec.rb[1:3]             | passed  | 0.03177 seconds |
-./spec/features/events_interface_spec.rb[1:4]             | passed  | 0.03133 seconds |
-./spec/features/show_events_user_spec.rb[1:1]             | passed  | 0.0424 seconds  |
-./spec/features/show_events_user_spec.rb[1:2]             | passed  | 0.34625 seconds |
-./spec/features/show_events_user_spec.rb[1:3]             | passed  | 0.02714 seconds |
-./spec/features/users_signin_spec.rb[1:1]                 | passed  | 0.02618 seconds |
-./spec/features/users_signin_spec.rb[1:2]                 | passed  | 0.05333 seconds |
-./spec/features/users_signup_spec.rb[1:1]                 | passed  | 0.03051 seconds |
-./spec/models/event_spec.rb[1:1]                          | passed  | 0.01104 seconds |
-./spec/models/user_event_spec.rb[1:1]                     | pending | 0.00001 seconds |
-./spec/models/user_spec.rb[1:1:1]                         | passed  | 0.00285 seconds |
-./spec/models/user_spec.rb[1:2:1]                         | passed  | 0.01887 seconds |
-./spec/models/user_spec.rb[1:3:1]                         | passed  | 0.02016 seconds |
+example_id                                                | status | run_time        |
+--------------------------------------------------------- | ------ | --------------- |
+./spec/controllers/events_controller_spec.rb[1:1:1]       | passed | 0.00845 seconds |
+./spec/controllers/sessions_controller_spec.rb[1:1:1]     | passed | 0.00619 seconds |
+./spec/controllers/static_pages_controller_spec.rb[1:1:1] | passed | 0.00683 seconds |
+./spec/controllers/users_controller_spec.rb[1:1:1]        | passed | 0.00393 seconds |
+./spec/controllers/users_controller_spec.rb[1:2:1]        | passed | 0.00975 seconds |
+./spec/features/events_interface_spec.rb[1:1]             | passed | 0.07282 seconds |
+./spec/features/events_interface_spec.rb[1:2]             | passed | 0.01208 seconds |
+./spec/features/events_interface_spec.rb[1:3]             | passed | 0.06471 seconds |
+./spec/features/events_interface_spec.rb[1:4]             | passed | 0.04167 seconds |
+./spec/features/show_events_user_spec.rb[1:1]             | passed | 0.04377 seconds |
+./spec/features/show_events_user_spec.rb[1:2]             | passed | 0.35712 seconds |
+./spec/features/show_events_user_spec.rb[1:3]             | passed | 0.03073 seconds |
+./spec/features/users_signin_spec.rb[1:1]                 | passed | 0.04955 seconds |
+./spec/features/users_signin_spec.rb[1:2]                 | passed | 0.03764 seconds |
+./spec/features/users_signup_spec.rb[1:1]                 | passed | 0.03466 seconds |
+./spec/models/event_spec.rb[1:1]                          | passed | 0.01087 seconds |
+./spec/models/user_spec.rb[1:1:1]                         | passed | 0.00405 seconds |
+./spec/models/user_spec.rb[1:2:1]                         | passed | 0.02584 seconds |
+./spec/models/user_spec.rb[1:3:1]                         | passed | 0.02504 seconds |

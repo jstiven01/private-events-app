@@ -13,7 +13,6 @@ RSpec.describe 'User sign in', type: :feature do
     click_button 'Sign in'
     expect(current_path).to eql("/users/#{user.id}")
     expect(page).to have_content('User Example')
-    expect(page).to have_content('user@example.com')
   end
 
   scenario 'Login with valid information followd by logout ' do
@@ -26,7 +25,6 @@ RSpec.describe 'User sign in', type: :feature do
     click_button 'Sign in'
     expect(current_path).to eql("/users/#{user.id}")
     expect(page).to have_content('User Example')
-    expect(page).to have_content('user@example.com')
     expect(page).to have_link(href: '/logout')
     click_link 'Sign out'
     expect(current_path).to eql('/')

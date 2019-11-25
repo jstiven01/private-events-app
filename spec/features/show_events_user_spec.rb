@@ -21,7 +21,6 @@ RSpec.describe 'Show events related to user', type: :feature do
     click_button 'Sign in'
     expect(current_path).to eql("/users/#{user.id}")
     expect(page).to have_content(user.name)
-    expect(page).to have_content(user.email)
     expect(page).to have_content(event1.name)
     expect(page).to have_content(event2.name)
     expect(page).to have_content(event3.name)
@@ -42,7 +41,6 @@ RSpec.describe 'Show events related to user', type: :feature do
     click_button 'Sign in'
     expect(current_path).to eql("/users/#{attendee.id}")
     expect(page).to have_content(attendee.name)
-    expect(page).to have_content(attendee.email)
     expect(page).to have_content(event1.name)
     expect(page).to have_content(event2.name)
     expect(page).to have_content(event3.name)
@@ -56,6 +54,5 @@ RSpec.describe 'Show events related to user', type: :feature do
     click_button 'Sign in'
     expect(current_path).to eql("/users/#{attendee.id}")
     expect(page).to have_content(attendee.name)
-    expect(page).to have_content(attendee.email)
   end
 end
