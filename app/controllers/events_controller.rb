@@ -19,6 +19,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @userevent = UserEvent.new
   end
 
   def index
@@ -29,13 +30,6 @@ class EventsController < ApplicationController
   private
 
   def events_params
-    params.require(:event).permit(:name, :location, :date, :description)
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    flash[:danger] = 'Please log in.'
-    redirect_to login_url
+    params.require(:event).permit(:name, :location, :date_event, :description)
   end
 end

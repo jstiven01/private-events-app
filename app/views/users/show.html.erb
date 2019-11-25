@@ -3,32 +3,20 @@
 <p><%= @user.name %></p>
 <p><%= @user.email %></p>
 
-<ul>
-    <% @user.created_events.each do |event| %>
-    <li><%= event.name %></li>
-    <li><%= event.location %></li>
-    <li><%= event.date_event %></li>
+<section class="all-events"> 
+    <% if logged_in? %>
+        <p>User name: <%= current_user.name %></p>
+
+        <div id='create-event'>
+            <%= link_to "Create event", new_event_path %>
+            <%= link_to "Check all the events in Private-Events", root_path %>
+        </div>
     <% end %>
-</ul>
-
-
-
-<ul>
-    <% @upcoming_events.each do |event| %>
-    <li><%= event.name %></li>
-    <li><%= event.location %></li>
-    <li><%= event.date_event %></li>
-    <% end %>
-</ul>
-
-
-
-<ul>
-    <% @prev_events.each do |event| %>
-    <li><%= event.name %></li>
-    <li><%= event.location %></li>
-    <li><%= event.date_event %></li>
-    <% end %>
+    <p class="title-events">Your Upcoming Events</p>
+    <%= render partial:'shared/event', locals: { events: @upcoming_events } %>
+    <p class="title-events">Your Past Events</p>
+    <%= render partial:'shared/event', locals: { events: @prev_events } %>
+</section>
 </ul>
 
 
