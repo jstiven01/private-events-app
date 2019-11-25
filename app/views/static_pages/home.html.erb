@@ -1,0 +1,13 @@
+<div class="main-image">
+<div class="static-page-title">
+    <div>Made for</div>
+    <div>those who do</div>
+</div>
+</div>
+<section class="all-events"> 
+    <h1>ALL EVENTS</h1>
+    <p class="title-events">Upcoming Events</p>
+    <%= render partial:'shared/event', locals: { events: @events_upcoming } %>
+    <p class="title-events">Past Events</p>
+    <%= render partial:'shared/event', locals: { events: @events_past } %>
+</section> 

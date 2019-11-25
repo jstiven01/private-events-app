@@ -1,0 +1,19 @@
+<section class="all-events"> 
+    <% if logged_in? %>
+        <p>Hey!! <%= current_user.name %></p>
+
+        <div id='links-event'>
+            <button type="button"><%= link_to "Create event", new_event_path %></button>
+            <button type="button"><%= link_to "Check all the events in Private-Events", root_path %></button>
+        </div>
+    <% end %>
+    <p class="title-events">Your Created Events</p>
+    <%= render partial:'shared/event', locals: { events: current_user.created_events } %>
+    <p class="title-events">Your Upcoming Events</p>
+    <%= render partial:'shared/event', locals: { events: @upcoming_events } %>
+    <p class="title-events">Your Past Events</p>
+    <%= render partial:'shared/event', locals: { events: @prev_events } %>
+</section>
+</ul>
+
+

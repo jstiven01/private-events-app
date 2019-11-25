@@ -1,0 +1,24 @@
+<section class="single-event">
+<h1><%= @event.name %></h1>
+<p>Location: <%= @event.location %></p>
+<p>Date: <%= @event.date_event %></p>
+<p>Description: <%= @event.description %></p>
+<p>Attendees: <%= pluralize(@event.attendees.length, 'person') %></p>
+<% if logged_in? %>
+<ul>
+    <% @event.attendees.each do |attendee| %>
+    <li>Name: <%= attendee.name %>, email: <%= attendee.email %></li>
+    <% end %>
+</ul>
+<% end %>
+<% if @event.date_event > Time.now && !@event.attendees.include?(current_user)  %>
+    <%= form_for @userevent do |f| %>
+
+        <%= f.hidden_field :attended_event, :value => @event.id %>
+
+        <%= f.submit "Register" %>
+    <% end %>
+<% end %>
+</section>
+
+

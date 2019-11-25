@@ -1,0 +1,10 @@
+<section class="forms sign-in"> 
+    <h1>SIGN IN</h1>
+    <%= form_for(:session, url: login_path) do |f| %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+
+        <%= f.submit "Sign in" %>
+    <% end %>
+</section>

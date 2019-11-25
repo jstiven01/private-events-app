@@ -1,0 +1,31 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.single-event {
+    margin: 0 auto;
+    padding: 0;
+    width: 980px;
+}
+
+.create-event {
+    margin: 0 auto;
+    padding: 0;
+    width: 980px;
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+        &> * {
+            margin: 10px 0;
+            padding: 0;
+            width: 100%;
+        }
+        label {
+            font-weight: bold;
+        }
+        .field_with_errors > * {
+            width: 100%;
+        }
+    }
+}
